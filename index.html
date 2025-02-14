@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Inicio del Header -->
+    <header class="header" id="home">
+        <div class="container">
+          <div class="header-content">
+            <div class="breathe-animation">
+                <div class="logo-container">
+                    <img src="/src/logo.png" alt="Logo de Gato" class="logo">
+                </div>
+              </div>
+            <input id="toggle" type="checkbox">
+            <label class="toggle-container" for="toggle">
+              <span class="button button-toggle"></span>
+            </label>
+            <!-- El menú de navegación -->
+            <nav class="nav">
+              <a class="nav-item" href="#post">Post</a>
+              <a class="nav-item" href="#about">About Me</a>
+              <a class="nav-item" href="#footer">Footer</a>
+              <a class="nav-item" href="#more">+More</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+       <!-- Fin del Header -->
+      
+     <!-- Hero Section -->
+     <section class="herosection">
+        <div class="hero">
+            <p class="message"><br/> A <br/> LITTLE OF</br> MY <br/> PROGRESS</p> 
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="noise">
+                    <feTurbulence type="fractalNoise" baseFrequency="0.002" numOctaves="3" result="noise"/>
+                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="100"/>
+                </filter>   
+                <filter id="contrast">
+                    <feColorMatrix in="SourceGraphic" type="matrix"
+                        values="1 0 0 0 0  
+                                0 1 0 0 0  
+                                0 0 1 0 0  
+                                0 0 0 30 -10"/>
+                    <feComposite in="SourceGraphic" operator="atop"/> 
+                </filter>  
+            </defs>
+        </svg>
+    </section>
+
+
+    <!-- Cards Section -->
+    <section class="cards-section" id="post">
+        <div class="container">
+            <h2 class="section-title">WorKs</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="./src/navhero.png" alt="Post Image">
+                    <h3 class="card-title">Test hero section</h3>
+                    <p class="card-text">Desarrollo y test de la primera version del Hero Section.</p>
+                    <div class="tags">
+                        <span class="tag">Frontend</span>
+                        <span class="taghtml">Html</span>
+                        <span class="tagcss">Css</span>
+                    </div>
+                    <a href="posts/post1.html" class="postbtn">Ver más</a>
+                </div>
+                <div class="card">
+                    <img src="./src/post-section.png" alt="Post Image">
+                    <h3>Test post section</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="tags">
+                        <span class="tag">Frontend</span>
+                        <span class="taghtml">Html</span>
+                        <span class="tagcss">Css</span>
+                    </div>
+                    <a href="posts/post2.html" class="postbtn">Ver más</a>
+                </div>
+                <div class="card">
+                    <img src="./src/about-me.png" alt="Post Image">
+                    <h3>About me page</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="tags">
+                        <span class="tag">Frontend</span>
+                        <span class="taghtml">Html</span>
+                        <span class="tagcss">Css</span>
+                    </div>
+                    <a href="./posts/post3.html" class="postbtn">Ver más</a>
+                </div>
+                <div class="card">
+                    <img src="./src/carousel.png" alt="Post Image">
+                    <h3>Test Carousel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div class="tags">
+                        <span class="tag">Frontend</span>
+                        <span class="taghtml">Html</span>
+                        <span class="tagjava">JavaScript</span>
+                        <span class="tagcss">Css</span>
+                    </div>
+                    <a href="./posts/" class="postbtn">Ver más</a>
+                </div>
+                <div class="card">
+                    <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Post Image">
+                    <h3>Post 5</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="./posts/" class="postbtn">Ver más</a>
+                </div>
+                <div class="card">
+                    <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Post Image">
+                    <h3>Post 6</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="./posts/" class="postbtn">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="grid-container">
+            <div class="grid-item large-text">
+                AB0UT
+            </div>
+            <div class="grid-item image image-1">
+                <img src="/src/gengar.jpeg" alt="Person in chair">
+            </div>
+            <div class="grid-item large-text">M3</div>
+            <div class="grid-item text">
+                The creative motivation thrives on the dynamic collaboration between designers and furniture makers.
+            </div>
+            <div class="grid-item large-text">Zasazs</div>
+            <div class="grid-item image image-2">
+                <img src="https://cdn.dribbble.com/userupload/16900952/file/original-7ad6c7fc4a909ccebeaad479338f5795.jpg?resize=1024x1024&vertical=center" alt="Person with dog">
+            </div>
+            <div class="grid-item large-text">CoNTAcT</div>
+            <div class="grid-item description">
+                <p>I'm a passionate creator who believes in the power of technology to transform ideas into reality...</p>
+            </div>
+            <div class="grid-item large-text">M3</div>
+            <div class="grid-item image image-3">
+                <img src="https://cdn.dribbble.com/users/1821976/screenshots/16493129/media/967abd6ce70bcce522feff70a99318b2.jpg?resize=1000x750&vertical=center" alt="Dog on chair">
+            </div>
+            <div class="grid-item email">jairzasa@gmail.com</div>
+            <div class="grid-item text">
+                The creative motivation thrives on the dynamic collaboration between designers and furniture makers.
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <div class="footer-clean" id="footer">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>+More</h3>
+                        <ul class="options">
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About Me</h3>
+                        <ul class="options">
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">In a Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <h3>Contact Me</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Spinner -->
+    <div class="spinner-container">
+        <svg class="pl" viewBox="0 0 64 64" width="64px" height="64px" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#000" />
+                    <stop offset="100%" stop-color="#fff" />
+                </linearGradient>
+                <mask id="grad-mask">
+                    <rect x="0" y="0" width="64" height="64" fill="url(#grad)" />
+                </mask>
+            </defs>
+            <circle class="pl__ring" cx="32" cy="32" r="26" fill="none" stroke="hsl(223,90%,55%)" stroke-width="12" stroke-dasharray="169.65 169.65" stroke-dashoffset="-127.24" stroke-linecap="round" transform="rotate(135)" />
+            <g fill="hsl(223,90%,55%)">
+                <circle class="pl__ball1" cx="32" cy="45" r="6" transform="rotate(14)" />
+                <circle class="pl__ball2" cx="32" cy="48" r="3" transform="rotate(-21)" />
+            </g>
+            <g mask="url(#grad-mask)">
+                <circle class="pl__ring" cx="32" cy="32" r="26" fill="none" stroke="hsl(283,90%,55%)" stroke-width="12" stroke-dasharray="169.65 169.65" stroke-dashoffset="-127.24" stroke-linecap="round" transform="rotate(135)" />
+                <g fill="hsl(283,90%,55%)">
+                    <circle class="pl__ball1" cx="32" cy="45" r="6" transform="rotate(14)" />
+                    <circle class="pl__ball2" cx="32" cy="48" r="3" transform="rotate(-21)" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>

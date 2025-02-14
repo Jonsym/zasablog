@@ -1,0 +1,1084 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  background-color: #0d0d0d;
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none; /* Elimina subrayado de enlaces */
+  color: inherit; /* Hereda color de su contenedor */
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+a:hover {
+  color: #9b85e7;
+}
+
+/* Contenedor */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: #131313;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+@font-face {
+  font-family: 'TheFont';
+  src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+    format('woff2'); }
+    
+.breathe-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.breathe-animation span {
+  font-family: 'TheFont';
+  font-size:  clamp(2vw, 2vw, 2vh);
+  color: white;
+  text-align: center; 
+  animation: letter-breathe 0s ease-in-out infinite;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px; /* Ajustable según necesidad */
+  width: auto; /* Mantiene la proporción */
+}
+
+@media (max-width: 768px) {
+  .logo {
+      height: 80px;
+  }
+}
+
+@keyframes letter-breathe {
+  from,
+  to {
+    font-variation-settings: 'wght' 100;
+  }
+  50% {
+    font-variation-settings: 'wght' 900;
+  }
+}
+
+
+/* Enlaces de navegación */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: background-color 0.3s ease, opacity 0.5s ease;
+}
+
+/* Estilos para cada enlace */
+.nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.nav-link:hover {
+  background-color: rgba(255, 201, 71, 0.5);
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Animación de subrayado en hover */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #131313;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Efecto de subrayado */
+}
+
+/* Menú para pantallas pequeñas (responsive) */
+#toggle {
+  display: none;
+}
+
+.toggle-container {
+  display: none;
+  cursor: pointer;
+}
+
+.button-toggle {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.button-toggle::before,
+.button-toggle::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.button-toggle::before {
+  top: -10px;
+}
+
+.button-toggle::after {
+  top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  /* Botón de menú */
+  .toggle-container {
+    display: block;
+  }
+
+  /* Menú lateral (oculto por defecto) */
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #131313;
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+    z-index: 100;
+    overflow-y: auto;
+    opacity: 0;
+    animation: slideIn 0.3s forwards; /* Deslizar el menú cuando se abre */
+  }
+
+  /* Animación para el deslizamiento del menú lateral */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .nav-item {
+    display: block;
+    padding: 15px;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInNavItem 0.3s forwards;
+  }
+
+  /* Animación para los elementos del menú */
+  @keyframes fadeInNavItem {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .nav-item:hover {
+    background-color: #ffc947;
+    color: #131313;
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+  }
+
+  /* Mostrar el menú al marcar el checkbox */
+  #toggle:checked + .toggle-container + .nav {
+    display: block;
+  }
+
+  /* Transformación del ícono de hamburguesa */
+  #toggle:checked + .toggle-container .button-toggle {
+    transform: rotate(45deg);
+  }
+
+  #toggle:checked + .toggle-container .button-toggle::before {
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  #toggle:checked + .toggle-container .button-toggle::after {
+    transform: rotate(90deg);
+    top: 0;
+  }
+}
+/* Fin del Header */
+
+/* Hero Section */
+.herosection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1100px;
+  filter: url('#contrast');
+  position: relative;
+}
+
+/* Contenedor del Texto */
+.hero { 
+  filter:url('#noise') blur(4px);
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  
+}
+
+.hero::-webkit-scrollbar {
+  display: none;
+}
+
+/* Texto */
+.message {
+  margin-top: 200px;
+  font-family: "Lalezar", sans-serif;
+  font-style: italic;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #ffffe0;
+  line-height: 0.8;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  animation: scrollAnimation 6s infinite alternate;
+  transform: scaleX(0.5);
+}
+
+/* Animaciones */
+@keyframes scrollAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-3%);
+  }
+}
+
+/* Card Section */
+.cards-section{
+  background-color: #262626;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  
+}
+
+.card {
+ padding: .8em;
+ padding-bottom: 20px;
+ background-color: #212121;
+ transition: transform 0.3s ease;
+ overflow: hidden;
+ border-radius: 10px;
+ background: #212121;
+ box-shadow: 3px 3px 6px rgb(25, 25, 25),
+ -6px -6px 10px rgb(60, 60, 60);
+
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 20px 20px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 0 0 20px 20px;
+}
+
+.card-title {
+  position: relative;
+  margin: 12px 0 4px 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
+}
+
+
+.card-text {
+  font-size: 1.125rem;
+  color: #d1d1d1;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  border-left: 3px solid #b38f4d;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #212121;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.section-title {
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-family: 'TheFont';
+  font-size: clamp(2vw, 2vw, 2vh);
+}
+
+/* Optional: Add a gradient effect on hover */
+.card::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 20px;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+/* Card Section Fin */
+
+
+/* Footer */
+.footer-clean {
+  padding:30px 0;
+  background-color:#262626;
+  color:#4b4c4d;
+}
+
+.footer-clean h3 {
+  font-family: 'TheFont';
+  color: #e9e9e9be;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-weight:bold;
+  font-size:16px;
+} 
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+.footer-clean .item.social {
+  text-align:left;
+}
+
+@media (max-width:767px) {
+  .footer-clean .item {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align:center;
+  }
+}
+
+.footer-clean .item.social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin-left:10px;
+  margin-top:22px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity:0.9;
+}
+
+@media (max-width:991px) {
+  .footer-clean .item.social > a {
+    margin-top:40px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer-clean .item.social > a {
+    margin-top:10px;
+  }
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ad66fe;
+}
+
+
+.options{
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.options li:hover{
+  color: white;
+}
+
+/* Footer Fin */
+
+/* Empieza About Section */
+.about {
+  padding: 80px 0;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.grid-item {
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.large-text {
+  font-family: 'TheFont';
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.text, .description {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.email {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.image-1 {
+  background-color: #f6f7f9; /* Rojo */
+}
+
+.image-2 {
+  background-color: #6043fd; /* Verde */
+}
+
+.image-3 {
+  background-color: #fff3d1; /* Azul */
+}
+
+/* Termina About Section */
+
+/* Botones Cartas */
+
+.postbtn {
+  position: relative;
+  display: flex;
+  background-color: #1c1c1c; /* bg-neutral-800 */
+  width: 100%; /* w-64 */
+  border: 1px solid transparent;
+  text-align: left;
+  padding: 14px 28px;
+  font-size: 1rem; /* text-base */
+  font-weight: bold;
+  color: #f9fafb; /* text-gray-50 */
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: all 0.5s ease;
+  margin-top: 10px;
+}
+
+.postbtn::before {
+  content: "";
+  position: absolute;
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  right: 0.25rem; /* right-1 */
+  top: 0.25rem; /* top-1 */
+  z-index: 10;
+  background-color: #1e1e2e; /* bg-violet-500 */
+  border-radius: 50%;
+  filter: blur(8px);
+  transition: all 0.5s ease;
+}
+
+.postbtn::after {
+  content: "";
+  position: absolute;
+  z-index: 10;
+  width: 5rem; /* w-20 */
+  height: 5rem; /* h-20 */
+  background-color: #8c7ea6; /* bg-rose-300 */
+  right: 2rem; /* after:right-8 */
+  top: 0.75rem; /* top-3 */
+  border-radius: 50%;
+  filter: blur(8px);
+  transition: all 0.5s ease;
+}
+
+.postbtn:hover {
+  border-color: #D4C2FC; /* hover:border-rose-300 */
+  text-decoration-thickness: 2px; /* hover:decoration-2 */
+  text-underline-offset: 4px; /* hover:underline-offset-4 */
+  color: #D4C2FC; /* hover:text-rose-300 */
+}
+
+.postbtn:hover::before {
+  right: 3rem; /* hover:before:right-12 */
+  bottom: -2rem; /* hover:before:-bottom-8 */
+  box-shadow: 20px 20px 20px 30px #181818; /* hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] */
+  filter: blur(8px);
+}
+
+.postbtn:hover::after {
+  right: -2rem; /* hover:after:-right-8 */
+}
+/* Termina Botones Cartas */
+
+
+/* Inician Tags */
+.tags{
+  margin-top: 10px;
+}
+
+.tag{
+    text-decoration:none;
+    background-color: #7b6cd9;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#ddd;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+.tagjava{
+    text-decoration:none;
+    background-color: #f7ea39c7;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+    color: #000;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#000000;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+
+.tagcss{
+    text-decoration:none;
+    background-color: #514ee6;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#ffffff;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+
+.taghtml{
+    text-decoration:none;
+    background-color: #da9a4ce2;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#ffffff;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+.tagback{
+  text-decoration:none;
+    background-color: #af0d0dcb;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#ffffff;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+
+/* CSS Spinner */
+.pl {
+	display: block;
+	width: 8em;
+	height: 8em;
+}
+.pl__ring,
+.pl__ball1,
+.pl__ball2 {
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	transform-origin: 32px 32px;
+}
+.pl__ring {
+	animation-name: ring;
+}
+.pl__ball1 {
+	animation-name: ball1;
+}
+.pl__ball2 {
+	animation-name: ball2;
+}
+
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Animation */
+@keyframes ring {
+	from {
+		animation-timing-function: ease-in-out;
+		stroke-dashoffset: -122.52;
+		transform: rotate(135deg);
+	}
+	15% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -122.52;
+		transform: rotate(90deg);
+	}
+	35% {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -65.34;
+		transform: rotate(297.5deg);
+	}
+	55% {
+		animation-timing-function: ease-in-out;
+		stroke-dashoffset: -122.52;
+		transform: rotate(505deg);
+	}
+	70% {
+		animation-timing-function: ease-in-out;
+		stroke-dashoffset: -122.52;
+		transform: rotate(490deg);
+	}
+	85%,
+	to {
+		stroke-dashoffset: -122.52;
+		transform: rotate(497.5deg);
+	}
+}
+@keyframes ball1 {
+	from {
+		transform: rotate(14deg);
+	}
+	20% {
+		transform: rotate(-7deg);
+	}
+	60% {
+		transform: rotate(399deg);
+	}
+	75% {
+		transform: rotate(361deg);
+	}
+	90%,
+	to {
+		transform: rotate(374deg);
+	}
+}
+@keyframes ball2 {
+	from {
+		transform: rotate(-21deg);
+	}
+	25% {
+		transform: rotate(-47deg);
+	}
+	60% {
+		transform: rotate(364deg);
+	}
+	75% {
+		transform: rotate(326deg);
+	}
+	90%,
+	to {
+		transform: rotate(339deg);
+	}
+}
+
+/* Spinner Container */
+.spinner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+/* Animación de deslizamiento hacia arriba */
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Aplicar la animación cuando el spinner debe desaparecer */
+.spinner-container.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Animación de entrada para la sección About */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación para las tarjetas */
+.about-card {
+    opacity: 0; /* Inicialmente ocultas */
+    transform: translateY(20px); /* Desplazadas hacia abajo */
+    animation: fadeInUp 0.8s ease forwards; /* Animación de entrada */
+    animation-delay: 0.2s; /* Retraso para la segunda tarjeta */
+}
+
+.about-card:nth-child(2) {
+    animation-delay: 0.4s; /* Retraso para la tercera tarjeta */
+}
+
+.about-card:nth-child(3) {
+    animation-delay: 0.6s; /* Retraso para la cuarta tarjeta */
+}
+
+/* Mostrar las tarjetas al hacer scroll */
+@media screen and (max-width: 768px) {
+    .about-card {
+        animation: fadeInUp 0.8s ease forwards; /* Animación de entrada */
+        animation-delay: 0.2s; /* Retraso para la segunda tarjeta */
+    }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+  }
+
+  .large-text {
+    font-size: 40px; /* Tamaño de fuente más pequeño */
+  }
+
+  .text, .description, .email {
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una columna en pantallas muy pequeñas */
+  }
+
+  .large-text {
+    font-size: 30px; /* Tamaño de fuente aún más pequeño */
+  }
+
+  .text, .description, .email {
+    font-size: 0.9rem; /* Tamaño de fuente aún más pequeño */
+  }
+}

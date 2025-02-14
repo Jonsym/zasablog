@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="post.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+
+    <!-- Inicio del Header -->
+    <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <div class="breathe-animation">
+                <a href="/index.html"><span>ZasazS</span></a>
+            </div>
+            <input id="toggle" type="checkbox">
+            <label class="toggle-container" for="toggle">
+              <span class="button button-toggle"></span>
+            </label>
+            <!-- El menú de navegación -->
+            <nav class="nav">
+              <a class="nav-item" href="/index.html">Home</a>
+              <a class="nav-item" href="#about">About Me</a>
+              <a class="nav-item" href="#footer">Footer</a>
+              <a class="nav-item" href="#more">+More</a>
+            </nav>
+          </div>
+        </div>
+    </header>
+    <!-- Fin del Header -->
+
+    <!-- Blog Spot Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img-container">
+                    <img
+                        src="/src/navhero.png"
+                        alt="About Me Image"
+                        class="img-about"
+                    />
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Blog Part</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione perspiciatis unde eum soluta. Cumque consequatur veniam neque atque architecto rem, asperiores incidunt aut quidem accusamus itaque exercitationem doloribus a!
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Frontend</span>
+                        <span class="taghtml">Html</span>
+                        <span class="tagjava">JavaScript</span>
+                        <span class="tagcss">Css</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="base-template">
+        <div class="wrapper base-template__wrapper">
+            <h1 class="base-template__title">
+                Explora Mis Avances
+            </h1>
+            <div class="base-template__text">
+                Aquí encontrarás los proyectos y avances que he realizado durante mi aprendizaje en HTML, CSS, JavaScript y otras tecnologías.
+                <br>
+                Cada carta te llevará a una página donde podrás ver los detalles de lo que he aprendido, los desafíos que he enfrentado y cómo he mejorado mis habilidades a lo largo del tiempo.
+            </div>
+    
+            <div class="base-template__content">
+                <div class="emotions-slider">
+    
+                    <!-- Slider Navigation -->
+    
+                    <div class="emotions-slider__nav slider-nav">
+                        <div tabindex="0" class="slider-nav__item slider-nav__item_prev">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 26L2 14L14 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div tabindex="0" class="slider-nav__item slider-nav__item_next">
+                            <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 26L14 14L2 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+    
+                    <!-- Slider Content -->
+                    <div class="emotions-slider__slider swiper">
+                        <div class="emotions-slider__wrapper swiper-wrapper">
+    
+                            <!-- Slider: Slide 1 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 2 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 3 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 4 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 5 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 6 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Slider: Slide 7 -->
+                            <div class="emotions-slider__slide swiper-slide">
+                                <div class="emotions-slider__item emotions-slider-item">
+                                    <div class="emotions-slider-item__image">
+                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/slide-1.jpg" alt="Winds of Change" />
+                                    </div>
+    
+                                    <div class="emotions-slider-item__content">
+                                        <div class="emotions-slider-item__header">
+                                            <div class="emotions-slider-item__header-inner">
+                                                <div class="emotions-slider-item__price">Project 1</div>
+                                                <div class="emotions-slider-item__author">
+                                                    <div class="emotions-slider-item__author-image">
+                                                        <img src="https://bato-web-agency.github.io/bato-shared/img/slider-1/author-1.jpg" alt="Andrew Kelman" />
+                                                    </div>
+                                                    <div class="emotions-slider-item__author-name">
+                                                        Jon Zamudio
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__info">
+                                            <h2 class="emotions-slider-item__title">
+                                                Header Section
+                                            </h2>
+                                            <div class="emotions-slider-item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit nostrum dignissimos aperiam nobis</div>
+                                        </div>
+    
+                                        <div class="emotions-slider-item__footer">
+                                            <a class="emotions-slider-item__btn" href="/" onclick="event.preventDefault();">
+                                                <span class="emotions-slider-item__btn-text">See project</span>
+                                                <span class="emotions-slider-item__btn-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+    
+                    <!-- Slider Pagination -->
+                    <div class="emotions-slider__pagination slider-pagination"></div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>+More</h3>
+                        <ul class="options">
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About Me</h3>
+                        <ul class="options">
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">In a Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item"">
+                        <h3>Contact Me</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="post.js"></script>
+</body>
+</html>
