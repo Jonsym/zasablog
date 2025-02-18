@@ -386,7 +386,7 @@ a:hover {
   text-align: left;
   margin-bottom: 12px;
   padding: 10px 15px;
-  border-left: 3px solid #b38f4d;
+  border-left: 3px solid #8c7ea6;
 }
 
 .card:hover {
@@ -399,13 +399,24 @@ a:hover {
 }
 
 .section-title {
-  font-weight: 500;
+  font-weight: 600; /* Un poco más de grosor para destacar */
   color: #fff;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding-left: 15px;
-  margin-bottom: 20px;
-  font-family: 'TheFont';
-  font-size: clamp(2vw, 2vw, 2vh);
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada para mayor profundidad */
+  margin-bottom: 20px; /* Un poco más de espacio */
+  font-family: 'TheFont', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem); /* Más adaptable a diferentes pantallas */
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem); /* Adaptable a distintos tamaños de pantalla */
+  color: #b38f4d;
+  font-weight: 700; /* Más negrita para darle más presencia */
+  letter-spacing: 1.5px; /* Más espaciado para mejorar legibilidad */
+  text-align: center; /* Lo centramos para que se vea más uniforme */
+  margin-bottom: 16px;
+  border-bottom: 2px solid rgba(179, 143, 77, 0.7); /* Línea sutil debajo */
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 /* Optional: Add a gradient effect on hover */

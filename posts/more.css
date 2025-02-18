@@ -1,0 +1,221 @@
+/* ====== Estilos Generales ====== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #12100c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ====== Contenedor de Búsqueda y Filtros ====== */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #8c7ea6;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-input:focus {
+    border-color: #b38f4d;
+    box-shadow: 0 0 8px rgba(179, 143, 77, 0.6);
+}
+
+/* ====== Botones de Filtros ====== */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #7a33ffda;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+    background-color: #310066d7;
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background-color: white;
+    color: #12100c;
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* ====== Contenedor de Tarjetas ====== */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ====== Tarjetas ====== */
+.card {
+    width: 320px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.card a {
+    display: block;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight:bolder;
+    color: #ffffff;
+}
+
+.card-desc {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 8px;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    color: white;
+    display: inline-block;
+}
+
+.tagfrontend { 
+    background: #7b6cd9; 
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.tagbackend { 
+    background: #af0d0dcb;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px; 
+}
+
+.taghtml { 
+    background: #da9a4ce2; 
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.tagcss { 
+    background: #514ee6; 
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.tagjs { 
+    background: #f7ea39c7; 
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.tagframe { 
+    background: #cb10b28c; 
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #search-input {
+        width: 90%;
+    }
+
+    .filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
