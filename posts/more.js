@@ -57,3 +57,21 @@ document.addEventListener("DOMContentLoaded", () => {
     allBtn.classList.add("active");
     applyFilters();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-filters");
+    const filterGroup = document.querySelector(".filter-group");
+
+    toggleButton.addEventListener("click", function () {
+        filterGroup.classList.toggle("show");
+
+        // Cambiar el ícono de "+" a "-"
+        if (filterGroup.classList.contains("show")) {
+            toggleButton.textContent = "−"; // Símbolo de menos
+        } else {
+            toggleButton.textContent = "+"; // Símbolo de más
+        }
+    });
+});
+
