@@ -605,7 +605,7 @@ a:hover {
 }
 
 .image-1 {
-  background-color: #f6f7f9; /* Rojo */
+  background-color: #000000; /* Rojo */
 }
 
 .image-2 {
@@ -619,7 +619,6 @@ a:hover {
 /* Termina About Section */
 
 /* Botones Cartas */
-
 .postbtn {
   position: relative;
   display: flex;
