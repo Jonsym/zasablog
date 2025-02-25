@@ -209,7 +209,7 @@ a:hover {
     z-index: 100;
     overflow-y: auto;
     opacity: 0;
-    animation: slideIn 0.3s forwards; /* Deslizar el menú cuando se abre */
+    animation: slideIn 0.5s forwards; /* Deslizar el menú cuando se abre */
   }
 
   /* Animación para el deslizamiento del menú lateral */
@@ -248,7 +248,7 @@ a:hover {
   }
 
   .nav-item:hover {
-    background-color: #ffc947;
+    background-color: #D4C2FC;
     color: #131313;
     transform: translateY(-5px); /* Desplazamiento hacia arriba */
   }
@@ -893,6 +893,87 @@ a:hover {
   }
 }
 
+.tagnest{
+  text-decoration:none;
+    background-color: #1fddb1;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+    color: #000;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#000000;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
+
+
+.tagprisma{
+  text-decoration:none;
+    background-color: #017b198c;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+
+
+  &::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:.2em;
+    background-color:white;
+    transition: width .3s ease;
+  }
+
+  &:hover{
+    color:#ffffff;
+  }
+
+  &:hover::after{
+    width:100%;
+  }
+
+  &.underline2{
+    &::after{
+      left:auto;
+      right:0;
+    }
+  }
+}
 
 /* CSS Spinner */
 .pl {
@@ -1092,3 +1173,5 @@ a:hover {
     font-size: 0.9rem; /* Tamaño de fuente aún más pequeño */
   }
 }
+
+
