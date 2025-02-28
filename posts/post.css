@@ -915,212 +915,84 @@ a:hover {
 
 /* Inician Tags */
 
-.tags{
+.tags {
   margin-top: 10px;
   padding: 10px;
 }
 
-.tag{
-    text-decoration:none;
-    background-color: #7b6cd9;
-    border-radius: 4px;
-    padding: 1px 6px 0 6px;
-    text-transform: uppercase;
-    font-weight: 1000;
-    font-size: 10px;
-    margin-left: 6px;
-    position: relative;
-    bottom: 1px;
-
-  &::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:.2em;
-    background-color:white;
-    transition: width .3s ease;
-  }
-
-  &:hover{
-    color:#ddd;
-  }
-
-  &:hover::after{
-    width:100%;
-  }
-
-  &.underline2{
-    &::after{
-      left:auto;
-      right:0;
-    }
-  }
+.tag, .tagjava, .tagcss, .taghtml, .tagback {
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  text-transform: uppercase;
+  font-weight: 1000;
+  font-size: 14px;
+  margin-left: 8px;
+  position: relative;
+  bottom: 1px;
 }
 
-.tagjava{
-    text-decoration:none;
-    background-color: #f7ea39c7;
-    border-radius: 4px;
-    padding: 1px 6px 0 6px;
-    text-transform: uppercase;
-    font-weight: 1000;
-    font-size: 10px;
-    margin-left: 6px;
-    position: relative;
-    bottom: 1px;
-    color: #000;
-
-
-  &::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:.2em;
-    background-color:white;
-    transition: width .3s ease;
-  }
-
-  &:hover{
-    color:#000000;
-  }
-
-  &:hover::after{
-    width:100%;
-  }
-
-  &.underline2{
-    &::after{
-      left:auto;
-      right:0;
-    }
-  }
+.tag {
+  background-color: #7b6cd9;
+  color: white;
 }
 
-
-.tagcss{
-    text-decoration:none;
-    background-color: #514ee6;
-    border-radius: 4px;
-    padding: 1px 6px 0 6px;
-    text-transform: uppercase;
-    font-weight: 1000;
-    font-size: 10px;
-    margin-left: 6px;
-    position: relative;
-    bottom: 1px;
-
-
-  &::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:.2em;
-    background-color:white;
-    transition: width .3s ease;
-  }
-
-  &:hover{
-    color:#ffffff;
-  }
-
-  &:hover::after{
-    width:100%;
-  }
-
-  &.underline2{
-    &::after{
-      left:auto;
-      right:0;
-    }
-  }
+.tagjava {
+  background-color: #f7ea39c7;
+  color: #000;
 }
 
-
-.taghtml{
-    text-decoration:none;
-    background-color: #da9a4ce2;
-    border-radius: 4px;
-    padding: 1px 6px 0 6px;
-    text-transform: uppercase;
-    font-weight: 1000;
-    font-size: 10px;
-    margin-left: 6px;
-    position: relative;
-    bottom: 1px;
-
-
-  &::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:.2em;
-    background-color:white;
-    transition: width .3s ease;
-  }
-
-  &:hover{
-    color:#ffffff;
-  }
-
-  &:hover::after{
-    width:100%;
-  }
-
-  &.underline2{
-    &::after{
-      left:auto;
-      right:0;
-    }
-  }
+.tagcss {
+  background-color: #514ee6;
+  color: white;
 }
 
-.tagback{
-  text-decoration:none;
-    background-color: #af0d0dcb;
-    border-radius: 4px;
-    padding: 1px 6px 0 6px;
-    text-transform: uppercase;
-    font-weight: 1000;
-    font-size: 10px;
-    margin-left: 6px;
-    position: relative;
-    bottom: 1px;
-
-
-  &::after{
-    content:"";
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:0;
-    height:.2em;
-    background-color:white;
-    transition: width .3s ease;
-  }
-
-  &:hover{
-    color:#ffffff;
-  }
-
-  &:hover::after{
-    width:100%;
-  }
-
-  &.underline2{
-    &::after{
-      left:auto;
-      right:0;
-    }
-  }
+.taghtml {
+  background-color: #da9a4ce2;
+  color: white;
 }
 
+.tagback {
+  background-color: #af0d0dcb;
+  color: white;
+}
 
+.tag::after, .tagjava::after, .tagcss::after, .taghtml::after, .tagback::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2em;
+  background-color: white;
+  transition: width 0.3s ease;
+}
 
+.tag:hover, .tagjava:hover, .tagcss:hover, .taghtml:hover, .tagback:hover {
+  opacity: 0.8;
+}
+
+.tag:hover::after, .tagjava:hover::after, .tagcss:hover::after, .taghtml:hover::after, .tagback:hover::after {
+  width: 100%;
+}
+
+.underline2::after {
+  left: auto;
+  right: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px; /* Ajustable según necesidad */
+  width: auto; /* Mantiene la proporción */
+}
+
+@media (max-width: 768px) {
+  .logo {
+      height: 80px;
+  }
+}
