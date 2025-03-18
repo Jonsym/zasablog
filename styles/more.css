@@ -492,6 +492,130 @@ body {
     }
 }
 
+.tagnext {
+    text-decoration: none;
+    background: #14d8ff8c;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+    color: #000000;
+    margin-bottom: 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: .2em;
+        background-color: white;
+        transition: width .3s ease;
+    }
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &.underline2 {
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+  }
+  
+  .tagvite {
+    text-decoration: none;
+    background: #87fe9f8c;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+    color: #000000;
+    margin-bottom: 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: .2em;
+        background-color: white;
+        transition: width .3s ease;
+    }
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &.underline2 {
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+  }
+
+  .tagshadcn {
+    text-decoration: none;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 1px 6px 0 6px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 10px;
+    margin-left: 6px;
+    position: relative;
+    bottom: 1px;
+    color: #000000;
+    margin-bottom: 30px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: .2em;
+        background-color: white;
+        transition: width .3s ease;
+    }
+
+    &:hover {
+        color: #000000;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+
+    &.underline2 {
+        &::after {
+            left: auto;
+            right: 0;
+        }
+    }
+  }
+  
+
 /* ====== Responsive Design Avanzado ====== */
 @media (max-width: 1200px) {
     .cards-container {

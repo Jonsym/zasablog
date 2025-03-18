@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Blog</title>
-    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="../styles/post.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -17,7 +17,11 @@
         <div class="container">
           <div class="header-content">
             <div class="breathe-animation">
-                <a href="/index.html"><span>ZasazS</span></a>
+                <div class="logo-container">
+                    <a href="/index.html" onclick="event.preventDefault(); location.href=this.href;">
+                        <img src="../src/logo.png" alt="Trabajo 1" class="logo">
+                    </a>
+                </div>
             </div>
             <input id="toggle" type="checkbox">
             <label class="toggle-container" for="toggle">
@@ -25,10 +29,10 @@
             </label>
             <!-- El menú de navegación -->
             <nav class="nav">
-              <a class="nav-item" href="#">Home</a>
+              <a class="nav-item" href="../index.html">Home</a>
               <a class="nav-item" href="#about">About Me</a>
               <a class="nav-item" href="#footer">Footer</a>
-              <a class="nav-item" href="#more">+More</a>
+              <a class="nav-item" href="/pages/more.html">+More</a>
             </nav>
           </div>
         </div>
@@ -41,20 +45,19 @@
             <div class="about-content">
                 <div class="about-img-container">
                     <img
-                        src="../src/post-section.png"
+                        src="/src/post-section.png"
                         alt="About Me Image"
                         class="img-about"
                     />
                 </div>
                 <div class="about-text">
-                    <h2 class="section-title">About Blog Part</h2>
+                    <h2 class="section-title">Initial Post Section</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ratione perspiciatis unde eum soluta. Cumque consequatur veniam neque atque architecto rem, asperiores incidunt aut quidem accusamus itaque exercitationem doloribus a!
+                        Created with a card layout to better organize the space within my post section. This design allows each component or section to be displayed as individual pages, which can be accessed easily through the button. 
                     </p>
                     <div class="tags">
                         <span class="tag">Frontend</span>
                         <span class="taghtml">Html</span>
-                        <span class="tagjava">JavaScript</span>
                         <span class="tagcss">Css</span>
                     </div>
                 </div>
@@ -66,20 +69,20 @@
     <section class="base-template">
         <div class="wrapper base-template__wrapper">
             <h1 class="base-template__title">
-                Explora Mis Avances
+                discover My Journey
             </h1>
             <div class="base-template__text">
-                Aquí encontrarás los proyectos y avances que he realizado durante mi aprendizaje en HTML, CSS, JavaScript y otras tecnologías.
+                Here you'll find the projects and progress I've made during my learning of HTML, CSS, JavaScript, and other technologies.
                 <br>
-                Cada carta te llevará a una página donde podrás ver los detalles de lo que he aprendido, los desafíos que he enfrentado y cómo he mejorado mis habilidades a lo largo del tiempo.
+                Each card will take you to a page where you can view the details of what I've learned, the challenges I've faced, and how I've improved my skills over time.
             </div>
     
             <div class="base-template__content">
                 <div class="emotions-slider">
     
-                       <!-- Slider Navigation -->
+                    <!-- Slider Navigation -->
     
-                       <div class="emotions-slider__nav slider-nav">
+                    <div class="emotions-slider__nav slider-nav">
                         <div tabindex="0" class="slider-nav__item slider-nav__item_prev">
                             <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14 26L2 14L14 2" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
@@ -95,7 +98,7 @@
                     <!-- Slider Content -->
                     <div class="emotions-slider__slider swiper">
                         <div class="emotions-slider__wrapper swiper-wrapper">
-    
+       
                             <!-- Slider: Slide 1 -->
                             <div class="emotions-slider__slide swiper-slide">
                                 <div class="emotions-slider__item emotions-slider-item">
@@ -340,13 +343,13 @@
                             <div class="emotions-slider__slide swiper-slide">
                                 <div class="emotions-slider__item emotions-slider-item">
                                     <div class="emotions-slider-item__image">
-                                        <img src="/src/navhero.png" alt="Winds of Change" />
+                                        <img src="/src/newaboutme.png" alt="Winds of Change" />
                                     </div>
     
                                     <div class="emotions-slider-item__content">
                                         <div class="emotions-slider-item__header">
                                             <div class="emotions-slider-item__header-inner">
-                                                <div class="emotions-slider-item__price">Hero Section</div>
+                                                <div class="emotions-slider-item__price">New About Me</div>
                                                 <div class="emotions-slider-item__author">
                                                     <div class="emotions-slider-item__author-image">
                                                         <img src="/src/logo.png" alt="Andrew Kelman" />
@@ -360,10 +363,10 @@
     
                                         <div class="emotions-slider-item__info">
                                             <h2 class="emotions-slider-item__title">
-                                                Initial Hero Section
+                                                Updated About Me Section
                                             </h2>
                                             <div class="emotions-slider-item__text">
-                                                "This is the first version of the Hero section, which also includes the initial version of the navbar for better navigation."</div>
+                                                "This is the new version of the About Me section, where a fully CSS-based design was used to achieve this responsive layout, while maintaining the essence of showcasing an About Me section."</div>
                                         </div>
     
                                         <div class="emotions-slider-item__footer">
@@ -410,10 +413,10 @@
                     <div class="col-sm-4 col-md-3 item"">
                         <h3>Contact Me</h3>
                         <div class="social-icons">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Jonsym" aria-label="Github"><i class="fab fa-github"></i></a>
+                            <a href="https://x.com/JonsymZ" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/jonsym_zs/?hl=es" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/jon-zamudio-184027281/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -421,6 +424,6 @@
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="post.js"></script>
+    <script src="/scripts/post.js"></script>
 </body>
 </html>

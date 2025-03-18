@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Trabajos</title>
-    <link rel="stylesheet" href="../posts/more.css">
+    <link rel="stylesheet" href="../styles/more.css">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
         <div class="header-container">
             <!-- Logo -->
             <div class="logo-container">
-                <a href="../index.html" onclick="event.preventDefault(); location.href=this.href;">
+                <a href="/index.html" onclick="event.preventDefault(); location.href=this.href;">
                     <img src="../src/logo.png" alt="Trabajo 1" class="logo">
                 </a>
             </div>
@@ -35,10 +35,12 @@
                         <button class="filter-btn" data-category="css">CSS</button>
                         <button class="filter-btn" data-category="javascript">JavaScript</button>
                         <button class="filter-btn" data-category="frameworks">FrameWorks</button>
-
                         <button class="filter-btn" data-category="nest">Nest.js</button>
                         <button class="filter-btn" data-category="prisma">Prisma.js</button>
                         <button class="filter-btn" data-category="tailwind">TailWindCSS</button>
+                        <button class="filter-btn" data-category="next">Next.js</button>
+                        <button class="filter-btn" data-category="vite">Vite.js</button>
+                        <button class="filter-btn" data-category="shadcn">Shadcn</button>
                     </div>
                 </div>
             </div>
@@ -48,12 +50,13 @@
         <!-- Tarjetas de Trabajos -->
         <div class="cards-container">
 
+            <!-- Post Hero Section -->
             <div class="card" data-category="frontend, html, css">
-                <a href="./herosection1.html" target="_blank">
+                <a href="../posts/herosection.html" target="_blank">
                     <img src="../src/navhero.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test hero section</h3>
+                    <h3 class="card-title">Initial Hero Section</h3>
                     <p class="card-desc">Desarrollo y test de la primera version del Hero Section.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -63,12 +66,13 @@
                 </div>
             </div>
 
+            <!-- Post Post Section -->
             <div class="card" data-category="frontend, html, css">
-                <a href="./post1.html" target="_blank">
+                <a href="../posts/postsection.html" target="_blank">
                     <img src="../src/post-section.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test Post Section</h3>
+                    <h3 class="card-title">Initial Post Section</h3>
                     <p class="card-desc">Desarrollo y test de la primera version del Post Section.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -78,12 +82,13 @@
                 </div>
             </div>
 
+            <!-- Post About Me -->
             <div class="card" data-category="frontend, html, css">
-                <a href="./post1.html" target="_blank">
+                <a href="../posts/aboutmesection.html" target="_blank">
                     <img src="../src/about-me.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">First About Me </h3>
+                    <h3 class="card-title">Inital About Me </h3>
                     <p class="card-desc">Desarrollo y test de la primera version del About Me Section.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -93,12 +98,13 @@
                 </div>
             </div>
 
+            <!-- Post Carousel -->
             <div class="card" data-category="frontend, html, css, javascript">
                 <a href="./post1.html" target="_blank">
                     <img src="../src/carousel.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">First Carousel Images </h3>
+                    <h3 class="card-title"> Carousel </h3>
                     <p class="card-desc">Desarrollo y test de la primera version del Carousel Images .</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -109,12 +115,13 @@
                 </div>
             </div>
 
+            <!-- Post Hero Update -->
             <div class="card" data-category="frontend, html, css, javascript">
                 <a href="./post1.html" target="_blank">
                     <img src="../src/newhero.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Updates Hero Section </h3>
+                    <h3 class="card-title">New Hero Section </h3>
                     <p class="card-desc">Desarrollo y test de la nueva version del Hero Section.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -125,12 +132,13 @@
                 </div>
             </div>
 
+            <!-- Post About Me Update -->
             <div class="card" data-category="frontend, html, css">
                 <a href="./post1.html" target="_blank">
                     <img src="../src/newaboutme.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Updated About Me Section </h3>
+                    <h3 class="card-title">New About Me Section </h3>
                     <p class="card-desc">Desarrollo y test de la nueva version del About Me Section.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
@@ -140,6 +148,7 @@
                 </div>
             </div>
 
+            <!-- Post Petzu Schema -->
             <div class="card" data-category="backend, nest, prisma">
                 <a href="./post1.html" target="_blank">
                     <img src="../src/firststepetzu.png" alt="Trabajo 1">
@@ -156,7 +165,8 @@
                 </div>
             </div>
 
-            <div class="card" data-category="Backend, Nest, Prisma, JavaScript">
+            <!-- Post Creation Modules -->
+            <div class="card" data-category="backend, nest, prisma, javaScript">
                 <a href="./post1.html" target="_blank">
                     <img src="../src/modulos.png" alt="Trabajo 1">
                 </a>
@@ -172,74 +182,181 @@
                 </div>
             </div>
 
-            <div class="card" data-category="">
+            <!-- Post Petzu Login -->
+            <div class="card" data-category="frontend, javascript, next, vite, shadcn">
                 <a href="./post1.html" target="_blank">
-                    <img src="../src/logo.png" alt="Trabajo 1">
+                    <img src="../src/login.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test 1</h3>
-                    <p class="card-desc">Creación de interfaces modernas para aplicaciones web y móviles.</p>
+                    <h3 class="card-title">Petzu Login</h3>
+                    <p class="card-desc">Create petzu login page.</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
-                        <span class="tagbackend">BackEnd</span>
-                        <span class="taghtml">Html</span>
-                        <span class="tagcss">Css</span>
-                        <span class="tagjs">JavaScript</span>
-                        <span class="tagframe">FrameWorks</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Post Dashboard Users -->
             <div class="card" data-category="">
                 <a href="./post1.html" target="_blank">
-                    <img src="../src/logo.png" alt="Trabajo 1">
+                    <img src="../src/dashboard_users.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test 1</h3>
-                    <p class="card-desc">Creación de interfaces modernas para aplicaciones web y móviles.</p>
+                    <h3 class="card-title">Dashboard Users</h3>
+                    <p class="card-desc">Create Dashboard for Users</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
-                        <span class="tagbackend">BackEnd</span>
-                        <span class="taghtml">Html</span>
-                        <span class="tagcss">Css</span>
                         <span class="tagjs">JavaScript</span>
-                        <span class="tagframe">FrameWorks</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
                     </div>
                 </div>
             </div>
             
+            <!-- Post Dashboard Business -->
             <div class="card" data-category="">
                 <a href="./post1.html" target="_blank">
-                    <img src="../src/logo.png" alt="Trabajo 1">
+                    <img src="../src/dashboard_business.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test 1</h3>
-                    <p class="card-desc">Creación de interfaces modernas para aplicaciones web y móviles.</p>
+                    <h3 class="card-title">Dashboard Business</h3>
+                    <p class="card-desc">Create a Dashboard for Business</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
-                        <span class="tagbackend">BackEnd</span>
-                        <span class="taghtml">Html</span>
-                        <span class="tagcss">Css</span>
                         <span class="tagjs">JavaScript</span>
-                        <span class="tagframe">FrameWorks</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Post Animals Pets -->
             <div class="card" data-category="">
                 <a href="./post1.html" target="_blank">
-                    <img src="../src/logo.png" alt="Trabajo 1">
+                    <img src="../src/dashboard_pets.png" alt="Trabajo 1">
                 </a>
                 <div class="card-content">
-                    <h3 class="card-title">Test 1</h3>
-                    <p class="card-desc">Creación de interfaces modernas para aplicaciones web y móviles.</p>
+                    <h3 class="card-title">Dashboard Pets</h3>
+                    <p class="card-desc">Create a Dashboard for Pets</p>
                     <div class="card-tags">
                         <span class="tagfrontend">FrontEnd</span>
-                        <span class="tagbackend">BackEnd</span>
-                        <span class="taghtml">Html</span>
-                        <span class="tagcss">Css</span>
                         <span class="tagjs">JavaScript</span>
-                        <span class="tagframe">FrameWorks</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Animals Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/animals.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Animals Directory</h3>
+                    <p class="card-desc">Create an Animals Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Races Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/races.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Reces Directory</h3>
+                    <p class="card-desc">Create a Races Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Categories Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/categories.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Categories Directory</h3>
+                    <p class="card-desc">Create a Category Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Cities Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/cities.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Cities Directory</h3>
+                    <p class="card-desc">Create a Cities Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Colonies Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/colonies.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Colonies Directory</h3>
+                    <p class="card-desc">Create a Colonies Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Services Directory -->
+            <div class="card" data-category="">
+                <a href="./post1.html" target="_blank">
+                    <img src="../src/services.png" alt="Trabajo 1">
+                </a>
+                <div class="card-content">
+                    <h3 class="card-title">Services Directory</h3>
+                    <p class="card-desc">Create a Services Directory</p>
+                    <div class="card-tags">
+                        <span class="tagfrontend">FrontEnd</span>
+                        <span class="tagjs">JavaScript</span>
+                        <span class="tagnext">Next.js</span>
+                        <span class="tagvite">Vite.js</span>
+                        <span class="tagshadcn">Shadcn</span>
                     </div>
                 </div>
             </div>
@@ -247,7 +364,7 @@
         </div>
     </div>
 
-    <script src="./more.js"></script>
+    <script src="../scripts/more.js"></script>
 
 </body>
 </html>
